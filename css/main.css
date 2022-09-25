@@ -63,13 +63,23 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 768x;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -364,87 +374,90 @@ input:checked ~ .icon-agree {
   line-height: 1.19;
 }
 
+.site-nav, .contacts {
+  display: none;
+}
+
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.header-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-block {
+    display: flex;
+    align-items: center;
+  }
+  .site-nav {
+    display: flex;
+    column-gap: 50px;
+  }
+  .site-nav .current {
+    color: var(--color-hover);
+  }
+  .site-nav li {
+    position: relative;
+  }
+  .site-nav .site-nav__item {
+    color: var(--title-text-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav a:hover, .site-nav a:focus {
+    color: var(--color-hover);
+  }
+  .contacts {
+    display: flex;
+    column-gap: 50px;
+  }
+  .contacts .contacts__item {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts a:hover, .contacts a:focus {
+    color: var(--color-hover);
+  }
+  .icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .buttons .current {
+    background-color: var(--color-hover);
+    color: #ffffff;
+  }
 }
-
-.nav-block {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav {
-  display: flex;
-  column-gap: 50px;
-}
-.site-nav .current {
-  color: var(--color-hover);
-}
-.site-nav li {
-  position: relative;
-}
-.site-nav .site-nav__item {
-  color: var(--title-text-color);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.site-nav a:hover, .site-nav a:focus {
-  color: var(--color-hover);
-}
-
-.contacts {
-  display: flex;
-  column-gap: 50px;
-}
-.contacts .contacts__item {
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts a:hover, .contacts a:focus {
-  color: var(--color-hover);
-}
-
-.icon-envelope {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.icon-smartphone {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.buttons .current {
-  background-color: var(--color-hover);
-  color: #ffffff;
-}
-
 .hero {
   background-color: var(--background-hero-footer-col);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  max-width: 1600px;
+  max-width: 480px;
   margin: 0 auto;
   height: 600px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
@@ -455,13 +468,13 @@ input:checked ~ .icon-agree {
 
 .hero-title {
   color: var(--hero-text-color);
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  max-width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -484,6 +497,17 @@ input:checked ~ .icon-agree {
   padding: 6px 22px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1600px;
+  }
+  .hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
 .button-portf {
   cursor: pointer;
   font-family: inherit;
