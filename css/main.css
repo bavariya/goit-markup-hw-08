@@ -461,17 +461,6 @@ input:checked ~ .icon-agree {
   gap: 10px;
 }
 
-.current::after {
-  content: "";
-  position: absolute;
-  bottom: -28px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--color-hover);
-  border-radius: 4px;
-}
-
 .site-nav, .contacts {
   display: none;
 }
@@ -529,7 +518,7 @@ input:checked ~ .icon-agree {
   max-width: 480px;
   margin: 0 auto;
   height: 400px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero/Hero-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
