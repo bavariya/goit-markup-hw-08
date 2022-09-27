@@ -19,7 +19,7 @@ p { margin-bottom: 12px;
     }
    input {
     padding-left: 40px;
-    width: 448px;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -56,6 +56,7 @@ p { margin-bottom: 12px;
 
 .form-name {
     position: relative;
+    width: 100%;
 }
 
 .icon-field {
@@ -106,7 +107,7 @@ p { margin-bottom: 12px;
      @include flex-center;
      margin-left: auto;
      margin-right: auto;
-     @include font($lh:1.17);
+     @include font($fs:12px,$lh:1.17);
      letter-spacing: 0.03em;
      color: var(--text-color);
  }

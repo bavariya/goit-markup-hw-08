@@ -21,11 +21,15 @@
       <nav class="nav-block">
         <a class="logo" lang="en" href="./index.html"><span class="logo__element">Web</span>Studio</a>
         <ul class="site-nav list">
-          <li><a class="site-nav__item" href="./index.html">Студія</a></li>
-          <li><a class="site-nav__item current" href="./portfolio.html">Портфоліо</a></li>
+          <li><a class="site-nav__item current" href="./index.html">Студія</a></li>
+          <li><a class="site-nav__item" href="./portfolio.html">Портфоліо</a></li>
           <li><a class="site-nav__item" href="#">Контакти</a></li>
         </ul>
       </nav>
+      <button class="menu-button" type="button" data-menu-open>
+        <svg width=40 height=40 class="menu-button__icon-open">
+          <use href="./images/svg/icons.svg#icon-burger"></use>
+        </svg></button>
       <ul class="contacts list">
         <li>
           <a class="contacts__item" href="mailto:info@devstudio.com"><svg class="icon-envelope">
@@ -41,27 +45,61 @@
         </li>
       </ul>
     </div>
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button class="mobile-menu__button" type="button" data-menu-close>
+          <svg width=40 height=40 class="mobile-menu__icon-close">
+            <use href="./images/svg/icons.svg#icon-close-mobile"></use>
+          </svg></button>
+        <ul class="mobile-nav list">
+          <li><a href="./index.html" class="mobile-nav__item link">Студія</a></li>
+          <li><a href="./portfolio.html" class="mobile-nav__item mobile-current-page link">Портфоліо</a></li>
+          <li><a href="#" class="mobile-nav__item link">Контакти</a></li>
+        </ul>
+        <ul class="mobile-contacts list">
+          <li><a href="tel:+380961111111" class="mobile-contacts__tel link">+38 096 111 11 11</a></li>
+          <li><a href="mailto:info@devstudio.com" class="mobile-contacts__mail link">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile-links list">
+          <li><button class="mobile-links__btn" type="button">Instagram</button></li>
+          <li><button class="mobile-links__btn" type="button">Twitter</button></li>
+          <li><button class="mobile-links__btn" type="button">Facebook</button></li>
+          <li><button class="mobile-links__btn" type="button">LinkedIn</button></li>
+        </ul>
+      </div>
+
+    </div>
   </header>
 
   <!--Основний контент-->
   <main>
+    <!-- Приклади робіт -->
     <section class="buttons section">
       <div class="container">
         <h1 class="non-display">кнопки для прикладів</h1>
         <ul class="list buttons-block">
-          <li><button class="button-portf" type="button">Усі</button></li>
+          <li><button class="button-portf current" type="button">Усі</button></li>
           <li><button class="button-portf" type="button">Веб-сайти</button></li>
           <li><button class="button-portf" type="button">Додатки</button></li>
           <li><button class="button-portf" type="button">Дизайн</button></li>
           <li><button class="button-portf" type="button">Маркетинг</button></li>
         </ul>
-        <!-- Приклади робіт -->
         <ul class="list example-block">
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/technocrack.jpg" alt="Приклад-сайту" width="370" />
-
+                <picture>
+                  <source
+                    srcset="./images/portf/desktop/portfolio-1-desktop.jpg 1x, ./images/portf/desktop/portfolio-1-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source
+                    srcset="./images/portf/tablet/portfolio-1-tablet.jpg 1x, ./images/portf/tablet/portfolio-1-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source
+                    srcset="./images/portf/mobile/portfolio-1-mobile.jpg 1x, ./images/portf/mobile/portfolio-1-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portf/mobile/portfolio-1-mobile.jpg" alt="Приклад-сайту" />
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -79,7 +117,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/new-orlean.jpg" alt="Приклад-дизайну" width="370" />
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-2-desktop.jpg 1x, ./images/portf/desktop/portfolio-2-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-2-tablet.jpg 1x, ./images/portf/tablet/portfolio-2-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-2-mobile.jpg 1x, ./images/portf/mobile/portfolio-2-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                    <img src="./images/portfolio/new-orlean.jpg" alt="Приклад-дизайну" />
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -97,7 +143,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/seafood.jpg" alt="Приклад-додатків" width="370" />
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-3-desktop.jpg 1x, ./images/portf/desktop/portfolio-3-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-3-tablet.jpg 1x, ./images/portf/tablet/portfolio-3-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-3-mobile.jpg 1x, ./images/portf/mobile/portfolio-3-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portfolio/seafood.jpg" alt="Приклад-додатків"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -115,7 +169,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/project-prime.jpg" alt="Маркетинг-проект" width="370" />
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-4-desktop.jpg 1x, ./images/portf/desktop/portfolio-4-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-4-tablet.jpg 1x, ./images/portf/tablet/portfolio-4-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-4-mobile.jpg 1x, ./images/portf/mobile/portfolio-4-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                    <img src="./images/portfolio/seafood.jpg" alt="Приклад-додатків"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -133,8 +195,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/boxes-project.jpg" alt="Проект-з-коробки" width="370" />
-
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-5-desktop.jpg 1x, ./images/portf/desktop/portfolio-5-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-5-tablet.jpg 1x, ./images/portf/tablet/portfolio-5-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-5-mobile.jpg 1x, ./images/portf/mobile/portfolio-5-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portfolio/boxes-project.jpg" alt="Проект-з-коробки"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -152,8 +221,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/inspiration.jpg" alt="Натхнення-не-має-меж" width="370" />
-
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-6-desktop.jpg 1x, ./images/portf/desktop/portfolio-6-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-6-tablet.jpg 1x, ./images/portf/tablet/portfolio-6-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-6-mobile.jpg 1x, ./images/portf/mobile/portfolio-6-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portfolio/inspiration.jpg" alt="Натхнення-не-має-меж"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -171,8 +247,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/limited-edition.jpg" alt="Обмежений-тираж" width="370" />
-
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-7-desktop.jpg 1x, ./images/portf/desktop/portfolio-7-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-7-tablet.jpg 1x, ./images/portf/tablet/portfolio-7-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-7-mobile.jpg 1x, ./images/portf/mobile/portfolio-7-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                    <img src="./images/portfolio/limited-edition.jpg" alt="Обмежений-тираж"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -190,8 +273,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/lab-project.jpg" alt="Розробка-лейблу" width="370" />
-
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-8-desktop.jpg 1x, ./images/portf/desktop/portfolio-8-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-8-tablet.jpg 1x, ./images/portf/tablet/portfolio-8-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-8-mobile.jpg 1x, ./images/portf/mobile/portfolio-8-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portfolio/lab-project.jpg" alt="Розробка-лейблу"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -209,8 +299,15 @@
           <li class="example-link">
             <a href="#">
               <div class="work-image">
-                <img src="./images/portfolio/business.jpg" alt="Зростаючий-бізнес" width="370" />
-
+                <picture>
+                  <source srcset="./images/portf/desktop/portfolio-9-desktop.jpg 1x, ./images/portf/desktop/portfolio-9-desktop@2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/portf/tablet/portfolio-9-tablet.jpg 1x, ./images/portf/tablet/portfolio-9-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/portf/mobile/portfolio-9-mobile.jpg 1x, ./images/portf/mobile/portfolio-9-mobile@2x.jpg 2x"
+                    media="(min-width:480px)">
+                  <img src="./images/portfolio/business.jpg" alt="Зростаючий-бізнес"/>
+                </picture>
                 <div class="example-animation">
                   <p>
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -281,7 +378,7 @@
         <form class="form-subscribe" name="subscribe" autocomplete="on">
           <p class="form-subscribe__title">Підпишіться на розсилку</p>
           <label>
-            <input type="email" name="email-subscribe" placeholder="E-mail" class="form-subscribe__field">
+            <input class="form-subscribe__field" type="email" name="email-subscribe" placeholder="E-mail">
           </label>
           <button type="submit" class="subs-button"><span class="subs-button__group">Підписатися <svg width="20"
                 height="20">
@@ -292,6 +389,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

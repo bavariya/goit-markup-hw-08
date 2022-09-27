@@ -1,11 +1,11 @@
+.footer-block{
+    text-align: center;
+}
+
 .footer-section {
     background-color: var(--background-hero-footer-col);
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.footer-block {
-    display: flex;
 }
 
 .footer-logo {
@@ -48,7 +48,7 @@
 
 .footer-links {
     display: block;
-    margin-left: 70px;
+    margin-top: 60px;
 }
 
 .foter-icons {
@@ -72,3 +72,12 @@
         fill: var(--white-color);
     }
 }
+
+// .footer-block {
+//     display: flex;
+// }
+
+// .footer-links {
+//     display: block;
+//     margin-left: 70px;
+// }

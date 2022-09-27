@@ -1,38 +1,38 @@
 .team {
+    padding-top: 0;
     background-color: var(--background-section-col);
 }
 
 .team-case {
-    flex-basis: calc((100% - 90px) / 4);
+    display: block;
+
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-case:not(:last-child){
+    margin-bottom: 30px;
+}
+
 .team-case__member {
     color: var(--title-text-color);
-    @include font(500,16px,1.19);
+    @include font(500, 16px, 1.19);
     text-align: center;
     padding-top: 30px;
 }
 
 .team-case__position {
-    @include font(400,16px,1.19);
+    @include font(400, 16px, 1.19);
     text-align: center;
     margin-top: 10px;
     margin-bottom: 16px;
 }
 
-.team-block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
 .links {
     @include flex-center;
-    padding-bottom: 27px;
+    padding-bottom: 24px;
     gap: 10px;
 }
 
@@ -44,9 +44,24 @@
     fill: #afb1b8;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
+
+    &:hover,
+    &:focus {
         background-color: var(--color-hover);
         fill: var(--white-color);
     }
 }
+
+// .team-case {
+//     flex-basis: calc((100% - 90px) / 4);
+//     background: var(--white-color);
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//         0px 2px 1px rgba(0, 0, 0, 0.2);
+//     border-radius: 0px 0px 4px 4px;
+// }
+
+// .team-block {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 30px;
+// }

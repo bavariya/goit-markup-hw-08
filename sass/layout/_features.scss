@@ -11,25 +11,21 @@
     margin: -1px;
 }
 
-.features {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
- li {
-    flex-basis: calc((100% - 90px) / 4);
-    }
-}
-
 .features__title {
     color: var(--title-text-color);
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     padding-bottom: 10px;
+    text-align: center;
+}
+
+.features li:not(:last-child){
+    margin-bottom: 30px;
 }
 
 .features__about {
-    @include font($lh:1.71);
+    @include font($lh: 1.71);
 }
 
 .features__icon {
@@ -39,3 +35,12 @@
     background-color: #f5f4fa;
     border-radius: 4px;
 }
+
+// .features {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 30px;
+//  li {
+//     flex-basis: calc((100% - 90px) / 4);
+//     }
+// }

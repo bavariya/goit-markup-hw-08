@@ -1,5 +1,5 @@
-.header {
-    border-bottom: 1px solid #ececec;
+.site-nav, .contacts{
+    display: none;
 }
 
 .logo__element {
@@ -14,103 +14,100 @@
 .logo,
 .logo__element {
     font-family: Raleway, sans-serif;
-    @include font(700,26px,1.19);
+    @include font(700, 26px, 1.19);
 }
 
-.site-nav,.contacts{
-    display: none;
+.menu-button, .mobile-menu__button{
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.menu-button:hover,
+.menu-button:focus .menu-button__icon-open{
+ fill:var(--color-hover);
+ cursor: pointer;
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header{
-    padding-top: 16px;
-    padding-bottom: 16px;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-
-@media screen and (min-width:480px){
-
+.header {
+    border-bottom: 1px solid #ececec;
 }
 
-@media screen and (min-width:768px){
-    .header {
-            padding-top: 24px;
-            padding-bottom: 24px;
-        }
-    
-        .header-block {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    
-        .nav-block {
-            display: flex;
-            align-items: center;
-        }
-    
-        .site-nav {
-            display: flex;
-            column-gap: 50px;
-    
-            .current {
-                color: var(--color-hover);
-            }
-    
-            li {
-                position: relative;
-            }
-    
-            .site-nav__item {
-                color: var(--title-text-color);
-                @include font(500);
-                letter-spacing: 0.02em;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-    
-            & a:hover,
-            & a:focus {
-                color: var(--color-hover);
-            }
-        }
-    
-        .contacts {
-            display: flex;
-            column-gap: 50px;
-    
-            .contacts__item {
-                display: flex;
-                align-items: center;
-                color: var(--text-color);
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 1.71;
-                letter-spacing: 0.02em;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-    
-            & a:hover,
-            & a:focus {
-                color: var(--color-hover);
-            }
-        }
-    
-        .icon-envelope {
-            width: 16px;
-            height: 12px;
-            margin-right: 10px;
-            fill: currentColor;
-        }
-    
-        .icon-smartphone {
-            width: 10px;
-            height: 16px;
-            margin-right: 10px;
-            fill: currentColor;
-        }
-    
-        .buttons .current {
-            background-color: var(--color-hover);
-            color: #ffffff;
-        }
-}
+// .header {
+//     padding-top: 24px;
+//     padding-bottom: 24px;
+// }
+
+
+
+// .nav-block {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .site-nav {
+//  display: flex;
+//  column-gap: 50px;
+//     .current {
+//         color: var(--color-hover);
+//     }
+
+//     li {
+//         position: relative;
+//     }
+
+//     .site-nav__item {
+//         color: var(--title-text-color);
+//         @include font(500);
+//         letter-spacing: 0.02em;
+//         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+
+//     & a:hover,
+//     & a:focus {
+//         color: var(--color-hover);
+//     }
+// }
+
+// .contacts {
+//     display: flex;
+//     column-gap: 50px;
+//  .contacts__item {
+//       display: flex;
+//       align-items: center;
+//       color: var(--text-color);
+//       @include font (500, 14px, 1.71);
+//       letter-spacing: 0.02em;
+//       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+//   & a:hover,
+//   & a:focus {
+//     color: var(--color-hover);
+//    }
+// }
+
+// .icon-envelope {
+//     width: 16px;
+//     height: 12px;
+//     margin-right: 10px;
+//     fill: currentColor;
+// }
+
+// .icon-smartphone {
+//     width: 10px;
+//     height: 16px;
+//     margin-right: 10px;
+//     fill: currentColor;
+// }

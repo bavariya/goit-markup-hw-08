@@ -1,3 +1,12 @@
+.buttons-block {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-bottom: 40px;
+    width: 326px;
+}
+
 .button-portf {
     cursor: pointer;
     font-family: inherit;
@@ -19,11 +28,16 @@
     }
 }
 
-.buttons-block {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-   li:not(:last-child) {
-        margin-right: 8px;
-    }
+.buttons .current {
+    background-color: var(--color-hover);
+    color: #ffffff;
 }
+
+// .buttons-block {
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 50px;
+//    li:not(:last-child) {
+//         margin-right: 8px;
+//     }
+// }
