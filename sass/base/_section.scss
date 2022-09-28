@@ -11,16 +11,13 @@
     text-align: center;
 }
 
+@media screen and (min-width:1200px) {
+   .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-// .section {
-//     padding-top: 94px;
-//     padding-bottom: 94px;
-// }
-
-// .section-title {
-//     color: var(--title-text-color);
-//     font-size: 36px;
-//     line-height: 1.17;
-//     margin-bottom: 50px;
-//     text-align: center;
-// }
+   .section-title {
+    margin-bottom: 50px;
+  }    
+}

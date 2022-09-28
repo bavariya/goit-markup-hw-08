@@ -33,11 +33,16 @@
     color: #ffffff;
 }
 
-// .buttons-block {
-//     display: flex;
-//     justify-content: center;
-//     margin-bottom: 50px;
-//    li:not(:last-child) {
-//         margin-right: 8px;
-//     }
-// }
+@media screen and (min-width:768px){
+    .buttons-block {
+     justify-content: center;
+     margin-bottom: 30px;      
+     width: 100%;    
+ }
+}
+
+@media screen and (min-width:1200px) {
+    .buttons-block{
+        margin-bottom: 34px;
+    }    
+}

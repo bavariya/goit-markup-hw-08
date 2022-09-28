@@ -36,11 +36,30 @@
     border-radius: 4px;
 }
 
-// .features {
-//     display: flex;
-//     justify-content: space-between;
-//     gap: 30px;
-//  li {
-//     flex-basis: calc((100% - 90px) / 4);
-//     }
-// }
+@media screen and (min-width:768px){
+    .features{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .features li:not(:last-child) {
+        margin-bottom: 0px;        
+        }
+    
+    .features li{
+        width: 354px;
+    }
+
+    .features__title{
+        text-align: start;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .features li {
+       flex-basis: calc((100% - 90px) / 4);
+       }
+    }
+
